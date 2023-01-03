@@ -12,20 +12,20 @@ public class AverageWithInputValidation {
         int sumMark = 0;
         double average;
 
-        for(int studentNo = 1; studentNo <= numStudents; studentNo++) {
+        for (int studentNo = 1; studentNo <= numStudents; studentNo++) {
             System.out.println("Enter the mark (0-100) for student " + studentNo + ": ");
             isValid = false;
             do {
                 inputMark = scan.nextInt();
-                if(inputMark >= 0 && inputMark <= 100) {
+                if (inputMark >= 0 && inputMark <= 100) {
                     isValid = true;
                     sumMark += inputMark;
                 } else {
                     System.out.println("Invalid input, try again...");
                     System.out.println("Enter the mark (0-100) for student " + studentNo + ": ");
                 }
-            } while(!isValid);
+            } while (!isValid);
         }
-        System.out.printf("The average mark is: %.2f%n" , (double)sumMark/3);
+        System.out.printf("The average mark is: %.2f%n", (double) sumMark / 3);
     }
 }

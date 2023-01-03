@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ComparableTest {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ArrayList<Movie> list = new ArrayList<Movie>();
         list.add(new Movie("Force Awakens", 8.3, 2015));
         list.add(new Movie("Star Wars", 8.7, 1977));
@@ -15,8 +14,7 @@ public class ComparableTest {
         Collections.sort(list);
 
         System.out.println("Movies after sorting : ");
-        for (Movie movie: list)
-        {
+        for (Movie movie : list) {
             System.out.println(movie.getName() + " " +
                     movie.getRating() + " " +
                     movie.getYear());

@@ -8,7 +8,7 @@ public class SumAverageRunningInt {
         final int upperbound = 100;
 //////////////////////////////////////////////////////
         //for loop
-        for (int i = lowerbound; i <= upperbound; i++){
+        for (int i = lowerbound; i <= upperbound; i++) {
             sum += i;
         }
 /////////////////////////////////////////////////////
@@ -45,7 +45,7 @@ public class SumAverageRunningInt {
         //sumOdd, sumEven and absolute difference
         int sumOdd = 0;
         int sumEven = 0;
-        for(int i = lowerbound; i <= upperbound; i++) {
+        for (int i = lowerbound; i <= upperbound; i++) {
             if (i % 2 == 0) {
                 sumEven += i;
             } else {
@@ -54,6 +54,6 @@ public class SumAverageRunningInt {
         }
         System.out.println("Sum of odd numbers is: " + sumOdd);
         System.out.println("Sum of even numbers is: " + sumEven);
-        System.out.println("Absolute difference is " + Math.abs(sumEven-sumOdd));
+        System.out.println("Absolute difference is " + Math.abs(sumEven - sumOdd));
     }
 }

@@ -1,9 +1,10 @@
 package lab10.library;
 
-public class Dvd extends Item{
+public class Dvd extends Item {
     int duration;
+
     public Dvd(String title, int year, int duration) {
-        super(title,year);
+        super(title, year);
         this.duration = duration;
     }
 
@@ -14,6 +15,7 @@ public class Dvd extends Item{
     public void setDuration(int duration) {
         this.duration = duration;
     }
+
     @Override
     public String toString() {
         return "Dvd[" + "duration=" + duration + ", title='" + title + "'" + ", year=" + year + "]";

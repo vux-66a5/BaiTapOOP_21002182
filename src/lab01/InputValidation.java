@@ -12,7 +12,7 @@ public class InputValidation {
             System.out.print("Enter number: ");
             inputNum = scan.nextInt();
 
-            if( ((inputNum > 0) && (inputNum < 10)) || ((inputNum > 90) && (inputNum < 100)) ) {
+            if (((inputNum > 0) && (inputNum < 10)) || ((inputNum > 90) && (inputNum < 100))) {
                 isValid = true;
             } else {
                 System.out.println("Invalid input, try again...");

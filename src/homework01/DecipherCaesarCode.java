@@ -5,26 +5,23 @@ import java.util.Scanner;
 public class DecipherCaesarCode {
     private void convertDecipherCode(String cipherText) {
         String plainText = "";
-        for(int i = 0; i < cipherText.length(); i++) {
-            if(Character.toString(cipherText.charAt(i)).matches("^[D-Z]$")) {
+        for (int i = 0; i < cipherText.length(); i++) {
+            if (Character.toString(cipherText.charAt(i)).matches("^[D-Z]$")) {
                 plainText += Character.toString(cipherText.charAt(i) - 3);
-            }
-            else if(cipherText.charAt(i) == 'A') {
+            } else if (cipherText.charAt(i) == 'A') {
                 plainText += "X";
-            }
-            else if(cipherText.charAt(i) == 'B') {
+            } else if (cipherText.charAt(i) == 'B') {
                 plainText += "Y";
-            }
-            else if (cipherText.charAt(i) == 'C') {
+            } else if (cipherText.charAt(i) == 'C') {
                 plainText += "Z";
-            }
-            else {
+            } else {
                 plainText += Character.toString(cipherText.charAt(i));
             }
 
         }
         System.out.println("The plaintext string is: " + plainText);
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter a ciphertext string: ");

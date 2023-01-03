@@ -4,10 +4,9 @@ public class CheckOddEven {
     public static void main(String[] args) {
         int number = 10;
 //        System.out.println("The number is : " + number);
-        if(number % 2 == 0) {
+        if (number % 2 == 0) {
             System.out.println("The number you input is even");
-        }
-        else {
+        } else {
             System.out.println("The number you input is odd");
         }
         System.out.println("BYE!");

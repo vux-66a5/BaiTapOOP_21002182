@@ -2,7 +2,7 @@ package lab10.phonebook;
 
 import java.util.Objects;
 
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student> {
     String name;
     String lastname;
     String phone;
@@ -63,24 +63,25 @@ public class Student implements Comparable<Student>{
     public int compareTo(Student s) {
         return 0;
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(name, lastname,phone,average);
+        return Objects.hash(name, lastname, phone, average);
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Student student = (Student) o;
-        return  Double.compare(student.average, average) == 0
-            && Objects.equals(name,student.name)
-            && Objects.equals(lastname, student.lastname)
-            && Objects.equals(phone, student.phone);
+        return Double.compare(student.average, average) == 0
+                && Objects.equals(name, student.name)
+                && Objects.equals(lastname, student.lastname)
+                && Objects.equals(phone, student.phone);
     }
 
     @Override

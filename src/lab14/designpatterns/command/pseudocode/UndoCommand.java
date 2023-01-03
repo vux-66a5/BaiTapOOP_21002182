@@ -1,6 +1,6 @@
 package lab14.designpatterns.command.pseudocode;
 
-public class UndoCommand extends Command{
+public class UndoCommand extends Command {
     public UndoCommand(Application app, Editor editor) {
         super(app, editor);
     }

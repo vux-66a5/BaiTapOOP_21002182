@@ -30,30 +30,30 @@ public class PensionContributionCalculator {
         int age = scan.nextInt();
 
         //check final contributable salary ( max = 6000 )
-        if(salary > salaryCeiling) {
+        if (salary > salaryCeiling) {
             contributableSalary = 6000;
         } else {
             contributableSalary = salary;
         }
 
         //compute contributions
-        if(age <= 55) {
-            employeeContribution = contributableSalary*employeeRate55AndBelow;
-            employerContribution = contributableSalary*employerRate55AndBelow;
+        if (age <= 55) {
+            employeeContribution = contributableSalary * employeeRate55AndBelow;
+            employerContribution = contributableSalary * employerRate55AndBelow;
         } else if (age <= 60) {
-            employeeContribution = contributableSalary*employeeRateFrom55to60;
-            employerContribution = contributableSalary*employerRateFrom55to60;
+            employeeContribution = contributableSalary * employeeRateFrom55to60;
+            employerContribution = contributableSalary * employerRateFrom55to60;
         } else if (age <= 65) {
-            employeeContribution = contributableSalary*employeeRateFrom60to65;
-            employerContribution = contributableSalary*employerRateFrom60to65;
+            employeeContribution = contributableSalary * employeeRateFrom60to65;
+            employerContribution = contributableSalary * employerRateFrom60to65;
         } else {
-            employeeContribution = contributableSalary*employeeRateAbove65;
-            employerContribution = contributableSalary*employerRateAbove65;
+            employeeContribution = contributableSalary * employeeRateAbove65;
+            employerContribution = contributableSalary * employerRateAbove65;
         }
 
-        System.out.printf("The employee's contribution is: %.2f%n" , employeeContribution);
-        System.out.printf("The employer's contribution is: %.2f%n" , employerContribution);
-        System.out.printf("The total contribution is: %.2f%n" , (employeeContribution+employerContribution));
+        System.out.printf("The employee's contribution is: %.2f%n", employeeContribution);
+        System.out.printf("The employer's contribution is: %.2f%n", employerContribution);
+        System.out.printf("The total contribution is: %.2f%n", (employeeContribution + employerContribution));
 
     }
 }

@@ -7,6 +7,7 @@ public class MyLinkedListNode {
     public MyLinkedListNode(Object payload) {
         this.payload = payload;
     }
+
     public MyLinkedListNode(Object payload, MyLinkedListNode next) {
         this.payload = payload;
         this.next = next;

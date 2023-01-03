@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Comparator1Test {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ArrayList<Movie1> list = new ArrayList<Movie1>();
         list.add(new Movie1("Force Awakens", 8.3, 2015));
         list.add(new Movie1("Star Wars", 8.7, 1977));
@@ -18,7 +17,7 @@ public class Comparator1Test {
         System.out.println("Sorted by rating");
         RatingCompare ratingCompare = new RatingCompare();
         Collections.sort(list, ratingCompare);
-        for (Movie1 movie: list)
+        for (Movie1 movie : list)
             System.out.println(movie.getRating() + " " +
                     movie.getName() + " " +
                     movie.getYear());
@@ -29,7 +28,7 @@ public class Comparator1Test {
         System.out.println("\nSorted by name");
         NameCompare nameCompare = new NameCompare();
         Collections.sort(list, nameCompare);
-        for (Movie1 movie: list)
+        for (Movie1 movie : list)
             System.out.println(movie.getName() + " " +
                     movie.getRating() + " " +
                     movie.getYear());
@@ -37,9 +36,9 @@ public class Comparator1Test {
         // Uses Comparable to sort by year
         System.out.println("\nSorted by year");
         Collections.sort(list);
-        for (Movie1 movie: list)
+        for (Movie1 movie : list)
             System.out.println(movie.getYear() + " " +
                     movie.getRating() + " " +
-                    movie.getName()+" ");
+                    movie.getName() + " ");
     }
 }

@@ -1,6 +1,6 @@
 package designpatternscollection.visitor.visitorpractice1;
 
-public class VisitorImpl implements Visitor{
+public class VisitorImpl implements Visitor {
     @Override
     public void visit(BusinessBook businessBook) {
         System.out.println("BusinessBook info : ");

@@ -5,14 +5,15 @@ public class CreditCardValidator {
         return (getSize(credit_number) >= 13
                 && getSize(credit_number) <= 16
                 && (prefixMatched(credit_number, 4)
-                    || prefixMatched(credit_number, 5)
-                    || prefixMatched(credit_number, 37)
-                    || prefixMatched(credit_number, 6))
+                || prefixMatched(credit_number, 5)
+                || prefixMatched(credit_number, 37)
+                || prefixMatched(credit_number, 6))
                 && (sumOfDoubleEvenPlace(credit_number)
                 + sumOfOddPlace(credit_number)) % 10 == 0);
     }
+
     public static boolean isValid(String number) {
-      return isValid(Long.parseLong(number));
+        return isValid(Long.parseLong(number));
     }
 
     public static int sumOfDoubleEvenPlace(long number) {

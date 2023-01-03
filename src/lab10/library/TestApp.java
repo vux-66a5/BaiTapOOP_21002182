@@ -9,8 +9,8 @@ public class TestApp {
         Item i1 = new Book("Soffocare", 2002, 170);
         Item i2 = new Dvd("Moon", 2011, 130);
 
-        Student s1 = new Student("0001", "Darrell", "Abbott","0123456789");
-        Student s2 = new Student("0002","Nick", "Drake", "9876543210");
+        Student s1 = new Student("0001", "Darrell", "Abbott", "0123456789");
+        Student s2 = new Student("0002", "Nick", "Drake", "9876543210");
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
         Rent[] rents = new Rent[5];

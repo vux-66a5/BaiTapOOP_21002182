@@ -10,7 +10,7 @@ public class ReverseInt {
         int inputNumber = scan.nextInt();
         int digit;
         System.out.println("Reversed number is: ");
-        while(inputNumber > 0) {
+        while (inputNumber > 0) {
             digit = inputNumber % 10;
             System.out.print(digit);
             inputNumber /= 10;

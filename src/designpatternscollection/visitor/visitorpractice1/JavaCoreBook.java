@@ -7,6 +7,7 @@ public class JavaCoreBook implements ProgramingBook {
     public void accept(Visitor v) {
         v.visit(this);
     }
+
     @Override
     public String getResource() {
         return "JavaCoreBook.java" + " from https://gpcoder.com/4813-huong-dan-java-design-pattern-visitor/";

@@ -5,26 +5,23 @@ import java.util.Scanner;
 public class CaesarCode {
     private void computeCipherText(String plaintext) {
         String cipherText = "";
-        for(int i = 0; i < plaintext.length(); i++) {
-            if(Character.toString(plaintext.charAt(i)).matches("^[A-W]$")) {
+        for (int i = 0; i < plaintext.length(); i++) {
+            if (Character.toString(plaintext.charAt(i)).matches("^[A-W]$")) {
                 cipherText += Character.toString(plaintext.charAt(i) + 3);
-            }
-            else if(plaintext.charAt(i) == 'X') {
+            } else if (plaintext.charAt(i) == 'X') {
                 cipherText += "A";
-            }
-            else if(plaintext.charAt(i) == 'Y') {
+            } else if (plaintext.charAt(i) == 'Y') {
                 cipherText += "B";
-            }
-            else if (plaintext.charAt(i) == 'Z') {
+            } else if (plaintext.charAt(i) == 'Z') {
                 cipherText += "C";
-            }
-            else {
+            } else {
                 cipherText += Character.toString(plaintext.charAt(i));
             }
 
         }
         System.out.println("The ciphertext string is: " + cipherText);
     }
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);

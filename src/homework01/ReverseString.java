@@ -13,7 +13,7 @@ public class ReverseString {
             revStr.append(Character.toString(inStr.charAt(charInx)));
         }
         revStr.append("\"");
-        System.out.printf("%s \"%s\" %s%s","The reverse of the String", inStr, "is: ", revStr );
+        System.out.printf("%s \"%s\" %s%s", "The reverse of the String", inStr, "is: ", revStr);
 
         //System.out.print(revStr.toString());
 

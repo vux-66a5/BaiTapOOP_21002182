@@ -7,13 +7,13 @@ public class HarmonicSum {
         double sumR2L = 0.0;
         double absDiff;
         // for−loop for summing from left-to-right
-        for(int i = 1; i <= n; i++) {
-            sumL2R += (double)1/i;
+        for (int i = 1; i <= n; i++) {
+            sumL2R += (double) 1 / i;
         }
         System.out.println("The sum from left-to-right is: " + sumL2R);
         // for−loop for summing from right−to−left
-        for(int i = n; i >= 1; i--) {
-            sumR2L += (double)1/i;
+        for (int i = n; i >= 1; i--) {
+            sumR2L += (double) 1 / i;
         }
         System.out.println("The sum from right-to-left is: " + sumR2L);
         // Find the absolute difference and display

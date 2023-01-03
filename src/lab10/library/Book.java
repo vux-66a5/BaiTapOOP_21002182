@@ -1,9 +1,10 @@
 package lab10.library;
 
-public class Book extends Item{
+public class Book extends Item {
     int pages;
+
     public Book(String title, int year, int pages) {
-        super(title,year);
+        super(title, year);
         this.pages = pages;
     }
 

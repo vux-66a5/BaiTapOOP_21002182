@@ -1,6 +1,6 @@
 package lab10.mymap;
 
-public class MyHashMap implements MyMap{
+public class MyHashMap implements MyMap {
     final static int INITIAL_SIZE = 8;
     MyHashMapEntry[] table;
     int size = 0;
@@ -11,7 +11,7 @@ public class MyHashMap implements MyMap{
 
     public Object key(Object key) {
         int bucket = getBucket(key);
-        if(table[bucket] != null) {
+        if (table[bucket] != null) {
             return table[bucket].getValue();
         }
         return -1;
@@ -23,28 +23,30 @@ public class MyHashMap implements MyMap{
     }
 
     public void put(Object key, Object value) {
-        if(capacityRatio() > 0.6) {
+        if (capacityRatio() > 0.6) {
             enlarge();
         }
         int bucket = getBucket(key);
-        if(table[bucket] == null) {
-            table[bucket] = new MyHashMapEntry(key,value);
+        if (table[bucket] == null) {
+            table[bucket] = new MyHashMapEntry(key, value);
             size++;
         }
     }
+
     @Override
     public void remove(Object key) {
         int idx = 0;
-        for(int i = 0; i < table.length; i++) {
-            if( table[i] != null && table[i].getKey() == key ) {
+        for (int i = 0; i < table.length; i++) {
+            if (table[i] != null && table[i].getKey() == key) {
                 idx = i;
 
             }
         }
-        for(int i = idx; i < table.length-1; i++) {
-            table[i] = table[i+1];
+        for (int i = idx; i < table.length - 1; i++) {
+            table[i] = table[i + 1];
         }
     }
+
     public boolean contains(Object o) {
         for (int i = 0; i < table.length; i++) {
             if (table[i] != null && table[i].getKey() == o) {
@@ -53,21 +55,24 @@ public class MyHashMap implements MyMap{
         }
         return false;
     }
+
     public int size() {
         return size;
     }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < table.length; i++) {
-            if(table[i] == null) {
+        for (int i = 0; i < table.length; i++) {
+            if (table[i] == null) {
                 sb.append(String.format("[bucket %d] -> null\n", i));
             } else {
-                sb.append(String.format("[bucket %d] -> (%s,%s)\n", i,table[i].getKey(),table[i].getValue()));
+                sb.append(String.format("[bucket %d] -> (%s,%s)\n", i, table[i].getKey(), table[i].getValue()));
             }
         }
         return sb.toString();
     }
+
     int getBucket(Object key) {
         int bucket = (Math.abs(key.hashCode()) % table.length);
         while (table[bucket] != null && table[bucket].getKey() != key) {
@@ -75,12 +80,14 @@ public class MyHashMap implements MyMap{
         }
         return bucket;
     }
+
     double capacityRatio() {
-        return size/ (double)table.length;
+        return size / (double) table.length;
     }
+
     void enlarge() {
-        MyHashMapEntry[] tmp = new MyHashMapEntry[table.length*2];
-        System.arraycopy(table,0,tmp,0,table.length);
+        MyHashMapEntry[] tmp = new MyHashMapEntry[table.length * 2];
+        System.arraycopy(table, 0, tmp, 0, table.length);
         table = tmp;
     }
 }

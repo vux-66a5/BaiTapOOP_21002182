@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class PayByPayPal implements PayStrategy {
     private static final Map<String, String> DATA_BASE = new HashMap<>();
-//    private final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
+    //    private final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
     private String email;
     private String password;
     private boolean signedIn;

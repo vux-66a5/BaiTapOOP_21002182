@@ -6,8 +6,9 @@ public class Database {
     private Database() {
 
     }
+
     public static Database getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new Database();
         }
         return instance;

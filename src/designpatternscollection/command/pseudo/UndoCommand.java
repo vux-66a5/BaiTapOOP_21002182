@@ -1,6 +1,6 @@
 package designpatternscollection.command.pseudo;
 
-public class UndoCommand extends Command{
+public class UndoCommand extends Command {
     public UndoCommand(Application app, Editor editor) {
         super(app, editor);
     }

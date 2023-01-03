@@ -8,6 +8,6 @@ public class Context {
     }
 
     public double executeStrategy(int a, int b) {
-        return strategy.execute(a,b);
+        return strategy.execute(a, b);
     }
 }

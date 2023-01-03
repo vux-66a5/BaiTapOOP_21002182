@@ -1,5 +1,5 @@
 package designpatternscollection.visitor.visitorpractice1;
 
-public interface ProgramingBook extends Book{
+public interface ProgramingBook extends Book {
     String getResource();
 }

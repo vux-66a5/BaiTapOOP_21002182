@@ -12,6 +12,7 @@ public class MyHashMapEntry {
     public Object getKey() {
         return key;
     }
+
     public Object getValue() {
         return value;
     }

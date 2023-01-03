@@ -9,6 +9,7 @@ public class PayByCreditCard implements PayStrategy {
     //    private final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
     private CreditCard card;
+
     /**
      * Collect credit card data.
      */
@@ -21,7 +22,7 @@ public class PayByCreditCard implements PayStrategy {
             String date = READER.readLine();
             System.out.print("Enter the CVV code: ");
             String cardVerificationValue = READER.readLine();
-            if(CreditCardValidator.isValid(number)) {
+            if (CreditCardValidator.isValid(number)) {
                 card = new CreditCard(number, date, cardVerificationValue);
             }
 

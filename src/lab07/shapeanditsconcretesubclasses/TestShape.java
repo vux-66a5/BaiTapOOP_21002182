@@ -10,7 +10,7 @@ public class TestShape {
         System.out.println(s1.isFilled());
         //System.out.println(s1.getRadius());
 
-        Circle c1 = (Circle)s1;                   // Downcast back to Circle
+        Circle c1 = (Circle) s1;                   // Downcast back to Circle
         System.out.println(c1);
         System.out.println(c1.getArea());
         System.out.println(c1.getPerimeter());
@@ -27,7 +27,7 @@ public class TestShape {
         System.out.println(s3.getColor());
         //System.out.println(s3.getLength());
 
-        Rectangle r1 = (Rectangle)s3;   // downcast
+        Rectangle r1 = (Rectangle) s3;   // downcast
         System.out.println(r1);
         System.out.println(r1.getArea());
         System.out.println(r1.getColor());
@@ -41,7 +41,7 @@ public class TestShape {
 
 // Take note that we downcast Shape s4 to Rectangle,
 //  which is a superclass of Square, instead of Square
-        Rectangle r2 = (Rectangle)s4;
+        Rectangle r2 = (Rectangle) s4;
         System.out.println(r2);
         System.out.println(r2.getArea());
         System.out.println(r2.getColor());
@@ -49,7 +49,7 @@ public class TestShape {
         System.out.println(r2.getLength());
 
 // Downcast Rectangle r2 to Square
-        Square sq1 = (Square)r2;
+        Square sq1 = (Square) r2;
         System.out.println(sq1);
         System.out.println(sq1.getArea());
         System.out.println(sq1.getColor());

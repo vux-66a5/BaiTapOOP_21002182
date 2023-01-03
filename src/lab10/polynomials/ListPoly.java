@@ -3,14 +3,15 @@ package lab10.polynomials;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListPoly extends AbstractPoly{
+public class ListPoly extends AbstractPoly {
     List<Double> coefficients = new ArrayList<>();
 
     public ListPoly(double[] coeffs) {
-        for(int i = 0; i < coeffs.length; i++) {
+        for (int i = 0; i < coeffs.length; i++) {
             coefficients.add(coeffs[i]);
         }
     }
+
     @Override
     public double[] coefficients() {
         double[] coeffArr = new double[coefficients.size()];
@@ -27,18 +28,19 @@ public class ListPoly extends AbstractPoly{
 
     @Override
     public int degree() {
-        return coefficients.size() -1;
+        return coefficients.size() - 1;
     }
 
     @Override
     public Poly derivative() {
-        double[] deri = new double[coefficients.size()-1];
-        for(int i = 0; i < deri.length; i++){
-            deri[i] = (i+1)*coefficients.get(i+1);
+        double[] deri = new double[coefficients.size() - 1];
+        for (int i = 0; i < deri.length; i++) {
+            deri[i] = (i + 1) * coefficients.get(i + 1);
         }
         Poly derivativeOf = new ArrayPoly(deri);
         return derivativeOf;
     }
+
     public String toString() {
         StringBuilder description = new StringBuilder();
         for (int i = this.degree(); i >= 0; i--) {

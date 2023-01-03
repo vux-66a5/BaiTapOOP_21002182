@@ -3,18 +3,21 @@ package lab07.shapeanditsconcretesubclasses;
 public class Rectangle extends Shape {
     protected double width;
     protected double length;
+
     public Rectangle() {
         super();
         this.width = 1.0;
         this.length = 1.0;
     }
+
     public Rectangle(double width, double length) {
         super();
         this.length = length;
         this.width = width;
     }
+
     public Rectangle(double width, double length, String color, boolean filled) {
-        super(color,filled);
+        super(color, filled);
         this.width = width;
         this.length = length;
     }
@@ -44,6 +47,7 @@ public class Rectangle extends Shape {
     double getPerimeter() {
         return 0;
     }
+
     @Override
     public String toString() {
         return "Rectangle[" + super.toString() + ",width=" + this.width + ",length=" + this.length + "]";

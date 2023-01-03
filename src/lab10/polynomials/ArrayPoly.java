@@ -1,6 +1,6 @@
 package lab10.polynomials;
 
-public class ArrayPoly extends AbstractPoly{
+public class ArrayPoly extends AbstractPoly {
     private final double[] coefficients;
 
     public ArrayPoly(double[] coefficients) {
@@ -26,13 +26,14 @@ public class ArrayPoly extends AbstractPoly{
     @Override
     public Poly derivative() {
 //        Poly derivativeOf = new ArrayPoly(derive());
-        double[] deri = new double[coefficients.length-1];
-        for(int i = 0; i < deri.length; i++){
-            deri[i] = (i+1)*coefficients[i+1];
+        double[] deri = new double[coefficients.length - 1];
+        for (int i = 0; i < deri.length; i++) {
+            deri[i] = (i + 1) * coefficients[i + 1];
         }
         Poly derivativeOf = new ArrayPoly(deri);
         return derivativeOf;
     }
+
     public String toString() {
         StringBuilder description = new StringBuilder();
         for (int i = this.degree(); i >= 0; i--) {
